@@ -1,4 +1,25 @@
----
-title: "Teaching Reproducible Data Analysis in R"
----
+The Institute of Neuroscience and Psychology and the School of Psychology at the University of Glasgow is hosting a one-day workshop from 09:30 – 16:30 on 9 March 2017 on teaching reproducible data analysis to psychology undergraduates and postgraduates using R. Details and registration are on [EventBrite](https://www.eventbrite.co.uk/e/teaching-reproducible-data-analysis-in-psychology-with-r-tickets-41384249404?aff=es2).
 
+Our teaching team has successfully made the transition to teaching R across all undergraduate and postgraduate levels, and we are organising this workshop in order to share experiences, insights, and teaching materials with academic staff from other institutions.
+
+Our changes have been far-reaching: Our curriculum now emphasizes certain essential ‘data science’ graduate skills that have been overlooked in traditional approaches to teaching, including programming skills, data visualisation, data wrangling and reproducible reports. Students learn about probability and inference through data simulation as well as by working with real datasets. We have also instituted regular coursework across all levels, so that students build their skills through practical experience.
+
+We will discuss the challenges associated with implementing this new approach, including staff re-training, supporting student learning through online help sessions, and computer-assisted assessment to handle large volumes of coursework.
+
+The workshop is aimed at academics interested in making the transition to teaching reproducible research in R at their own institutions, although we also would be pleased to have participation from institutions where R is already a core part of the curriculum. This event is being delivered with the support of the Scottish Branch of the BPS but is open to academics across the UK and beyond.
+
+## Tentative Schedule
+
+* 09:00 - 09:30 Coffee and chat (58 Hillhead Street)
+* 09:30 - 10:00 Introduction and philosophy
+* 10:00 - 10:30 Where it all began
+* 10:30 - 10:45 Coffee and chat
+* 10:45 - 11:15 Practicalities
+* 11:15 - 11:45 Staff skill development
+* 11:45 - 12:15 Student engagement
+* 12:15 - 13:00 Lunch (move to Boyd Orr)
+* 13:00 - 14:00 Lab demo
+* 14:00 - 14:30 Coffee and questions
+* 14:30 - 15:00 Assessment package
+* 15:00 - 15:30 Web exercise package
+* 15:30 - 16:30 Wine and discussion
