@@ -1,9 +1,16 @@
-name: "Teaching Reproducible Data Analysis in R"  
-author: "GUPsych R Team"  
-output_dir: "docs"  
-output:  
-  html_document:  
-    self_contained: no  
-    theme: flatly  
-navbar:  
-  title: "Teaching Reproducible Data Analysis in R" 
+name: Teaching Reproducible Data Analysis in R
+author: GUPsych R Team
+output_dir: docs
+output:
+  html_document:
+    theme: flatly
+    lib_dir: site_libs
+    self_contained: no
+navbar:
+  left:
+    - text: "GUPsych"
+      icon: fa-home
+      href: /
+    - text: "Teaching"
+      href: /teaching/
+
