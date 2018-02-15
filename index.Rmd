@@ -17,15 +17,15 @@ The workshop is aimed at academics interested in making the transition to teachi
 ## Tentative Schedule
 
 * 09:00 - 09:30 Coffee and chat (58 Hillhead Street)
-* 09:30 - 10:00 Introduction and philosophy
-* 10:00 - 10:30 Where it all began
+* 09:30 - 10:00 [Introduction and philosophy](intro.html)
+* 10:00 - 10:30 [Where it all began](syllabi.html)
 * 10:30 - 10:45 Coffee and chat
-* 10:45 - 11:15 Practicalities
-* 11:15 - 11:45 Staff skill development
-* 11:45 - 12:15 Student engagement
+* 10:45 - 11:15 [Practicalities](practicalities.html)
+* 11:15 - 11:45 [Staff skill development](staff.html)
+* 11:45 - 12:15 [Student engagement](students.html)
 * 12:15 - 13:00 Lunch (move to Boyd Orr)
-* 13:00 - 14:00 Lab demo
+* 13:00 - 14:00 [Lab demo](labdemo.html)
 * 14:00 - 14:30 Coffee and questions
-* 14:30 - 15:00 Assessment package
-* 15:00 - 15:30 Web exercise package
+* 14:30 - 15:00 [Assessment with `assessr`](assessr.html)
+* 15:00 - 15:30 [Web exercises with `webex`](webex.html)
 * 15:30 - 16:30 Wine and discussion
