@@ -2,7 +2,10 @@
 title: "Teaching Reproducible Data Analysis in R" 
 ---
 
-<img src="../logos/Rlogo-warhol-wide.svg" style="width: 100%">
+<div class="figure" style="width: 50%; float: right;">
+  <img src="images/warhol.jpg">
+  <p class="caption">We made our [logo with R code](logo.html)</p>
+</div>
 
 The Institute of Neuroscience and Psychology and the School of Psychology at the University of Glasgow is hosting a one-day workshop from 09:30 – 16:30 on 9 March 2017 on teaching reproducible data analysis to psychology undergraduates and postgraduates using R. Details and registration are on [EventBrite](https://www.eventbrite.co.uk/e/teaching-reproducible-data-analysis-in-psychology-with-r-tickets-41384249404?aff=es2).
 

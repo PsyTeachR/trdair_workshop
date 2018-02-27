@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Logo</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="/">
+    <span class="fa fa-home"></span>
+     
+    GUPsych
+  </a>
+</li>
+<li>
+  <a href="/teaching/">Teaching</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Logo</h1>
+
+</div>
+
+
+<p>Here’s a quick script for creating our Warhol-esque R logo. We’ve adapted the offical <a href="https://www.r-project.org/logo/">R logo</a>, which is under a CC-BY-SA 4.0 license.</p>
+<p>This function sets up the colour scheme. You can change <code>wcolors</code> below to anything you want.</p>
+<pre class="r"><code>warhol_color &lt;- function() {
+  if (!exists(&quot;current_wcolor&quot;)) {
+    current_wcolor &lt;&lt;- 0
+  } else {
+    current_wcolor &lt;&lt;- current_wcolor + 1
+  }
+  #wcolors &lt;- c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;pink&quot;, &quot;purple&quot;)
+  wcolors &lt;- c(
+    &quot;#FFF942&quot;, # yellow
+    &quot;#191464&quot;, # dark blue
+    &quot;#81A42F&quot;, # green
+    &quot;#2562D6&quot;, # royal blue
+    &quot;#CA1576&quot;, # hot pink
+    &quot;#FFF942&quot;, # yellow
+    &quot;#191464&quot;, # dark blue
+    &quot;#C91920&quot;, # red
+    &quot;#E382B3&quot;, # pink
+    &quot;#D97829&quot;, # orange
+    &quot;#572D6D&quot;, # purple
+    &quot;#76A8EA&quot;, # light blue
+    &quot;#C91920&quot;, # red
+    &quot;#18191D&quot;, # black
+    &quot;#F9F9F9&quot;, # white
+    &quot;#81A42F&quot;, # green
+    &quot;#D97829&quot;, # orange
+    &quot;#FAFEA3&quot;, # light yellow
+    &quot;#325052&quot;, # slate blue
+    &quot;#CA1576&quot;, # hot pink
+    &quot;#FAFEA3&quot;, # light yellow
+    &quot;#FFF942&quot;, # yellow
+    &quot;#C91920&quot;, # red
+    &quot;#81A42F&quot;, # green
+    &quot;#CA1576&quot;, # hot pink
+    &quot;#191464&quot;, # dark blue
+    &quot;#D97829&quot; # orange
+)
+  wcolors[current_wcolor%%length(wcolors)+1]
+}</code></pre>
+<pre class="r"><code>warhol &lt;- function(filename = &quot;warhol.svg&quot;, rows = 3, cols = 3) {
+  logowidth &lt;- 724
+  logoheight &lt;- 561
+
+  svg&lt;- paste0(&#39;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;
+               xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               preserveAspectRatio=&quot;xMidYMid&quot;
+               width=&quot;&#39;, logowidth*cols, &#39;&quot; height=&quot;&#39;,logoheight*rows,&#39;&quot;
+               viewBox=&quot;0 0 &#39;,logowidth*cols,&#39; &#39;,logoheight*rows,&#39;&quot;&gt;\n\n&#39;)
+
+  # define the R logo in SVG
+  svg &lt;- paste0(svg, &#39;&lt;define&gt;
+  &lt;rect id=&quot;bg&quot; width=&quot;&#39;,logowidth,&#39;&quot; height=&quot;&#39;,logoheight,&#39;&quot; fill-rule=&quot;evenodd&quot;/&gt;
+  &lt;path id=&quot;halo&quot; d=&quot;M361.453,485.937 C162.329,485.937 0.906,377.828 0.906,244.469
+    C0.906,111.109 162.329,3.000 361.453,3.000
+    C560.578,3.000 722.000,111.109 722.000,244.469
+    C722.000,377.828 560.578,485.937 361.453,485.937 ZM416.641,97.406
+    C265.289,97.406 142.594,171.314 142.594,262.484
+    C142.594,353.654 265.289,427.562 416.641,427.562
+    C567.992,427.562 679.687,377.033 679.687,262.484
+    C679.687,147.971 567.992,97.406 416.641,97.406 Z&quot;
+    fill-rule=&quot;evenodd&quot;/&gt;
+  &lt;path id=&quot;R&quot; d=&quot;M550.000,377.000
+    C550.000,377.000 571.822,383.585 584.500,390.000
+    C588.899,392.226 596.510,396.668 602.000,402.500
+    C607.378,408.212 610.000,414.000 610.000,414.000
+    L696.000,559.000 L557.000,559.062 L492.000,437.000
+    C492.000,437.000 478.690,414.131 470.500,407.500
+    C463.668,401.969 460.755,400.000 454.000,400.000
+    C449.298,400.000 420.974,400.000 420.974,400.000
+    L421.000,558.974 L298.000,559.026 L298.000,152.938
+    L545.000,152.938 C545.000,152.938 657.500,154.967 657.500,262.000
+    C657.500,369.033 550.000,377.000 550.000,377.000
+    ZM496.500,241.024 L422.037,240.976 L422.000,310.026
+    L496.500,310.002 C496.500,310.002 531.000,309.895 531.000,274.877
+    C531.000,239.155 496.500,241.024 496.500,241.024 Z&quot;
+    fill-rule=&quot;evenodd&quot;/&gt;
+&lt;/define&gt;&#39;)
+
+  current_wcolor &lt;&lt;- -1 # start colours at the beginning
+    
+  for (x in seq(0, logowidth*(cols-1), by = logowidth)) {
+    for (y in seq(0, logoheight*(rows-1), by = logoheight)) {
+      svg &lt;- paste0(svg, &#39;  &lt;g transform=&quot;translate(&#39;,x,&#39;,&#39;,y,&#39;)&quot;&gt;\n&#39;)
+      svg &lt;- paste0(svg, &#39;    &lt;use xlink:href=&quot;#bg&quot; fill=&quot;&#39;,warhol_color(),&#39;&quot; /&gt;\n\n&#39;)
+      svg &lt;- paste0(svg, &#39;    &lt;use xlink:href=&quot;#halo&quot; fill=&quot;&#39;,warhol_color(),&#39;&quot; /&gt;\n\n&#39;)
+      svg &lt;- paste0(svg, &#39;    &lt;use xlink:href=&quot;#R&quot; fill=&quot;&#39;,warhol_color(),&#39;&quot; /&gt;\n\n&#39;)
+      svg &lt;- paste0(svg, &#39;  &lt;/g&gt;\n\n&#39;)
+    }
+  }
+
+  svg &lt;- paste0(svg, &#39;&lt;/svg&gt;&#39;)
+
+  write(svg, file = filename)
+}</code></pre>
+<p>Just run the following code to make a new logo:</p>
+<pre class="r"><code>warhol(&quot;images/logo_square.svg&quot;, 3,3)</code></pre>
+<div class="figure">
+<img src="images/logo_square.svg" alt="You can make a square version" />
+<p class="caption">You can make a square version</p>
+</div>
+<pre class="r"><code>warhol(&quot;images/logo_wide.svg&quot;, 1,6)</code></pre>
+<div class="figure">
+<img src="images/logo_wide.svg" alt="Or a wide version" />
+<p class="caption">Or a wide version</p>
+</div>
+<pre class="r"><code>warhol(&quot;images/logo_too_many.svg&quot;, 30,30)</code></pre>
+<div class="figure">
+<img src="images/logo_too_many.svg" alt="Or even a version with 900 Rs" />
+<p class="caption">Or even a version with 900 Rs</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
