@@ -14,7 +14,7 @@ library(ggplot2)
 knitr::opts_chunk$set(fig.path='images/')
 ```
 
-Dale and Lisa are developing an R package called [`webex`](https://github.com/dalejbarr/webex) to make it easier to make web-based exercises. It provides an RMarkdown template and a few function to make questions that automatically give feedback and hint or solution buttons.
+Dale and Lisa are developing an R package called [`webex`](https://github.com/dalejbarr/webex) to make it easier to make web-based exercises. It provides an RMarkdown template and a few functions to make questions that automatically give feedback and hint or solution buttons.
 
 Create fill-in-the-blank questions using `fitb("4")`, providing the answer as the first argument.
 
@@ -108,3 +108,5 @@ knitr::include_graphics("images/knit_webex.png")
 ```
 
 6. Open the new .html file in your web browser.
+
+You can publish your html files on any web server, or set up a website on github using our instructions for [creating an academic website](/acadweb/).

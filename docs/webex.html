@@ -203,7 +203,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>Dale and Lisa are developing an R package called <a href="https://github.com/dalejbarr/webex"><code>webex</code></a> to make it easier to make web-based exercises. It provides an RMarkdown template and a few function to make questions that automatically give feedback and hint or solution buttons.</p>
+<p>Dale and Lisa are developing an R package called <a href="https://github.com/dalejbarr/webex"><code>webex</code></a> to make it easier to make web-based exercises. It provides an RMarkdown template and a few functions to make questions that automatically give feedback and hint or solution buttons.</p>
 <p>Create fill-in-the-blank questions using <code>fitb(&quot;4&quot;)</code>, providing the answer as the first argument.</p>
 <ul>
 <li>2 + 2 is <input class='solveme nospaces' size='3' data-answer='["4"]'/></li>
@@ -211,7 +211,7 @@ $(document).ready(function () {
 <p>You can also create these questions dynamically, using variables from your R session.</p>
 <pre class="r"><code>x &lt;- sample(2:8, 1)</code></pre>
 <ul>
-<li>The square root of 4 is: <input class='solveme nospaces' size='3' data-answer='["2"]'/></li>
+<li>The square root of 9 is: <input class='solveme nospaces' size='3' data-answer='["3"]'/></li>
 </ul>
 <p>The blanks are case-sensitive; if you don’t care about case, use the argument <code>ignore_case = TRUE</code>.</p>
 <p><code>fitb(&quot;E&quot;, ignore_case = TRUE)</code></p>
@@ -279,6 +279,7 @@ Solution
 <ol start="6" style="list-style-type: decimal">
 <li>Open the new .html file in your web browser.</li>
 </ol>
+<p>You can publish your html files on any web server, or set up a website on github using our instructions for <a href="/acadweb/">creating an academic website</a>.</p>
 </div>
 
 <script>
