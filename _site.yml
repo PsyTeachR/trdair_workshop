@@ -7,10 +7,9 @@ output:
     lib_dir: site_libs
     self_contained: no
 navbar:
-  left:
+  title: Teaching Reproducible Data Analysis in R
+  right:
     - text: "GUPsych"
       icon: fa-home
       href: /
-    - text: "Workshop"
-      href: /trdair_workshop/
 
