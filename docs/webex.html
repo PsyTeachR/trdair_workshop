@@ -69,6 +69,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="webex.css" type="text/css" />
 
 </head>
 
@@ -202,8 +203,166 @@ $(document).ready(function () {
 </div>
 
 
+<p>Dale and Lisa are developing an R package called <a href="https://github.com/dalejbarr/webex"><code>webex</code></a> to make it easier to make web-based exercises. It provides an RMarkdown template and a few function to make questions that automatically give feedback and hint or solution buttons.</p>
+<p>Create fill-in-the-blank questions using <code>fitb(&quot;4&quot;)</code>, providing the answer as the first argument.</p>
+<ul>
+<li>2 + 2 is <input class='solveme nospaces' size='3' data-answer='["4"]'/></li>
+</ul>
+<p>You can also create these questions dynamically, using variables from your R session.</p>
+<pre class="r"><code>x &lt;- sample(2:8, 1)</code></pre>
+<ul>
+<li>The square root of 4 is: <input class='solveme nospaces' size='3' data-answer='["2"]'/></li>
+</ul>
+<p>The blanks are case-sensitive; if you don’t care about case, use the argument <code>ignore_case = TRUE</code>.</p>
+<p><code>fitb(&quot;E&quot;, ignore_case = TRUE)</code></p>
+<ul>
+<li>What is the letter after D? <input class='solveme nospaces ignorecase' size='3' data-answer='["E"]'/></li>
+</ul>
+<p>If you want to ignore differences in whitespace use, use the argument <code>ignore_ws = TRUE</code> and include spaces in your answer anywhere they could be acceptable.</p>
+<p><code>fitb(&quot;library( tidyverse )&quot;, ignore_case = TRUE, width = &quot;20&quot;)</code></p>
+<ul>
+<li>How do you load the tidyverse package? <input class='solveme nospaces ignorecase' size='20' data-answer='["library( tidyverse )"]'/></li>
+</ul>
+<p>You can set more than one possible correct answer by setting the answers as a vector.</p>
+<p><code>fitb(c(&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;O&quot; , &quot;U&quot;), ignore_case = TRUE)</code></p>
+<ul>
+<li>Type a vowel: <input class='solveme nospaces ignorecase' size='3' data-answer='["A","E","I","O","U"]'/></li>
+</ul>
+<p>Create multiple choice questions using <code>mcq(c(answer = &quot;correct answer&quot;, &quot;incorrect 1&quot;, &quot;incorrect 2&quot;))</code>.</p>
+<ul>
+<li>“Never gonna give you up, never gonna: <select class='solveme' data-answer='["let you down"]'> <option></option> <option>let you down</option> <option>let you go</option> <option>turn you down</option> <option>run away</option> </select>”</li>
+<li>“I <select class='solveme' data-answer='["bless the rains"]'> <option></option> <option>bless the rains</option> <option>guess it rains</option> <option>sense the rain</option> <option>bless the waves</option> </select> down in Africa” -Toto</li>
+</ul>
+<p>If your options are just true or false, you can make a quick MCQ with <code>torf(TRUE)</code> or <code>torf(FALSE)</code></p>
+<ul>
+<li>You can permute values in a vector using <code>sample()</code>. <select class='solveme' data-answer='["TRUE"]'> <option></option> <option>TRUE</option> <option>FALSE</option> </select></li>
+</ul>
+<p>Webex also lets you make hidden solutions and hints by surrounding the hint or answer with <code>hide(&quot;Button Text&quot;)</code> and <code>unhide()</code>.</p>
+<ul>
+<li>Recreate the scatterplot below, using the built-in <code>cars</code> dataset.</li>
+</ul>
+<p><img src="images/cars-plot-1.png" width="576" /></p>
+<div class="solution">
+<button>
+I need a hint
+</button>
+<p><code>?geom_smooth</code></p>
+</div>
+<div class="solution">
+<button>
+Solution
+</button>
+<pre class="r"><code>ggplot(cars, aes(speed, dist)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;, color = &quot;red&quot;) +
+  ylab(&quot;distance&quot;)</code></pre>
+</div>
+<div id="getting-started" class="section level2">
+<h2>Getting Started</h2>
+<ol style="list-style-type: decimal">
+<li>Install webex from github. This is a little different from typical installation, since the package is in development. Just use the code below.</li>
+</ol>
+<pre class="r"><code>devtools::install_github(&quot;dalejbarr/webex&quot;)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a new RMarkdown file</li>
+</ol>
+<p><img src="images/new_rmarkdown.png" width="769" style="max-width: 500px" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Select the “Web Exercises” template.</li>
+</ol>
+<p><img src="images/webex_template.png" width="533" style="max-width: 500px;" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Edit the template with your content. Leave the <code>setup</code> chunk of code at the top.</p></li>
+<li><p>Knit to HTML</p></li>
+</ol>
+<p><img src="images/knit_webex.png" width="890" style="max-width: 500px" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Open the new .html file in your web browser.</li>
+</ol>
+</div>
 
+<script>
 
+/* update total correct if #total_correct exists */
+update_total_correct = function() {
+  if (t = document.getElementById("total_correct")) {
+    t.innerHTML =
+      document.getElementsByClassName("correct").length + " of " +
+      document.getElementsByClassName("solveme").length + " correct";
+  }
+}
+
+/* solution button toggling function */
+b_func = function() {
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "");
+  }
+  
+  if (my_answer !== "" & real_answers.includes(my_answer)) {
+    cl.add("correct");
+  } else {
+    cl.remove("correct");
+  }
+  update_total_correct();
+}
+
+window.onload = function() {
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+  
+  /* set up solveme inputs */
+  var solveme = document.getElementsByClassName("solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off"); 
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+    
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+    
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  update_total_correct();
+}
+
+</script>
 
 
 

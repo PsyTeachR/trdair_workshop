@@ -21,7 +21,7 @@ The workshop is aimed at academics interested in making the transition to teachi
 
 * 09:00 - 09:30 Coffee and chat (58 Hillhead Street)
 * 09:30 - 10:00 [Introduction and philosophy](intro.html)
-* 10:00 - 10:30 [Where it all began](syllabi.html)
+* 10:00 - 10:30 [Our approach](approach.html)
 * 10:30 - 10:45 Coffee and chat
 * 10:45 - 11:15 [Practicalities](practicalities.html)
 * 11:15 - 11:45 [Staff skill development](staff.html)
