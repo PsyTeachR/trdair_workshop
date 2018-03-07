@@ -11,6 +11,6 @@ navbar:
     - text: "GUPsych"
       icon: fa-home
       href: /
-    - text: "Teaching"
-      href: /teaching/
+    - text: "Workshop"
+      href: /trdair_workshop/
 
