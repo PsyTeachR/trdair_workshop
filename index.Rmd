@@ -32,3 +32,7 @@ The workshop is aimed at academics interested in making the transition to teachi
 * 14:30 - 15:00 [Assessment with `assessr`](assessr.html)
 * 15:00 - 15:30 [Web exercises with `webex`](webex.html)
 * 15:30 - 16:30 Wine and discussion
+
+# Resources
+
+Check our [resources](resources.html) page for links to additional materials: blog posts, R packages, training materials, cheatsheets, and more

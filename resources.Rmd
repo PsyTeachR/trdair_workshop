@@ -1,0 +1,15 @@
+---
+title: "Resources"
+---
+
+- [Staff training materials](https://gupsych.github.io/trdair_workshop/staff_training)
+
+- [`markr` package: Generating exam and assessment feedback reports (in development)](https://gupsych.github.io/trdair_workshop/feedback.html)
+
+- [`webex` package: Generate web exercises using RMarkdown (beta)](https://github.com/dalejbarr/webex)
+
+- [`assessr` package: Assessment/feedback for RMarkdown coursework assignments (in development)](https://github.com/dalejbarr/assessr)
+
+- [Grolemund and Wickham, *R for Data Science*](http://r4ds.had.co.nz)
+
+- [RStudio cheat sheets](https://www.rstudio.com/resources/cheatsheets/)

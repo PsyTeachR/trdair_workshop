@@ -1,5 +1,5 @@
 ---
-title: "Lab Demonstation: 'Probability' Inclass activity"
+title: "Lab Demonstration: 'Probability' Inclass activity"
 subtitle: "School of Psychology, University of Glasgow"
 output:
   html_document:
