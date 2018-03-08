@@ -2,7 +2,15 @@
 title: "Resources"
 ---
 
+## Training/Course materials
+
 - [Staff training materials](https://gupsych.github.io/trdair_workshop/staff_training)
+
+- [The Research Cycle: Full course materials from our MSc course on data wrangling](https://gupsych.github.io/research_cycle)
+
+## Useful R packages
+
+- [`exams` package: Create exams in R](http://www.r-exams.org)
 
 - [`markr` package: Generating exam and assessment feedback reports (in development)](https://gupsych.github.io/trdair_workshop/feedback.html)
 
@@ -10,6 +18,22 @@ title: "Resources"
 
 - [`assessr` package: Assessment/feedback for RMarkdown coursework assignments (in development)](https://github.com/dalejbarr/assessr)
 
+## Resources for learning R
+
 - [Grolemund and Wickham, *R for Data Science*](http://r4ds.had.co.nz)
 
 - [RStudio cheat sheets](https://www.rstudio.com/resources/cheatsheets/)
+
+- *Video intros to R/RStudio: Analyzing Scottish babynames* [part 1](https://youtu.be/lAaVPMcMs1w), [part 2](https://youtu.be/lzdTHCcClqo)
+
+- [Lisa DeBruine's blog](https://debruine.github.io)
+
+## On teaching R
+
+- [Dale Barr: No more excuses! R is better than SPSS for psychology undergrads, and students agree](https://datahowler.wordpress.com/2016/09/10/no-more-excuses-r-is-better-than-spss-for-psychology-undergrads-and-students-agree/)
+
+- [Grolemund, G. & Wickham, H. (2014). A cognitive interpretation of data analysis. *International Statistical Review*, *82*, 184--204](http://onlinelibrary.wiley.com/doi/10.1111/insr.12028/abstract)
+
+- [Baumer, B., Çetinkaya-Rundel, M., Bray, A., Loi, L., & Horton, N. (2014). RMarkdown: Integrating a Reproducible Analysis Tool into Introductory Statistics. *Technology Innovations in Statistics Education*, *8*(1)](http://escholarship.org/uc/item/90b2f5xh)
+
+- [David Robinson: Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/)

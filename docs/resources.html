@@ -35,7 +35,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
   }
 }
 </script>
@@ -203,14 +203,40 @@ $(document).ready(function () {
 </div>
 
 
+<div id="trainingcourse-materials" class="section level2">
+<h2>Training/Course materials</h2>
 <ul>
 <li><p><a href="https://gupsych.github.io/trdair_workshop/staff_training">Staff training materials</a></p></li>
+<li><p><a href="https://gupsych.github.io/research_cycle">The Research Cycle: Full course materials from our MSc course on data wrangling</a></p></li>
+</ul>
+</div>
+<div id="useful-r-packages" class="section level2">
+<h2>Useful R packages</h2>
+<ul>
+<li><p><a href="http://www.r-exams.org"><code>exams</code> package: Create exams in R</a></p></li>
 <li><p><a href="https://gupsych.github.io/trdair_workshop/feedback.html"><code>markr</code> package: Generating exam and assessment feedback reports (in development)</a></p></li>
 <li><p><a href="https://github.com/dalejbarr/webex"><code>webex</code> package: Generate web exercises using RMarkdown (beta)</a></p></li>
 <li><p><a href="https://github.com/dalejbarr/assessr"><code>assessr</code> package: Assessment/feedback for RMarkdown coursework assignments (in development)</a></p></li>
+</ul>
+</div>
+<div id="resources-for-learning-r" class="section level2">
+<h2>Resources for learning R</h2>
+<ul>
 <li><p><a href="http://r4ds.had.co.nz">Grolemund and Wickham, <em>R for Data Science</em></a></p></li>
 <li><p><a href="https://www.rstudio.com/resources/cheatsheets/">RStudio cheat sheets</a></p></li>
+<li><p><em>Video intros to R/RStudio: Analyzing Scottish babynames</em> <a href="https://youtu.be/lAaVPMcMs1w">part 1</a>, <a href="https://youtu.be/lzdTHCcClqo">part 2</a></p></li>
+<li><p><a href="https://debruine.github.io">Lisa DeBruine’s blog</a></p></li>
 </ul>
+</div>
+<div id="on-teaching-r" class="section level2">
+<h2>On teaching R</h2>
+<ul>
+<li><p><a href="https://datahowler.wordpress.com/2016/09/10/no-more-excuses-r-is-better-than-spss-for-psychology-undergrads-and-students-agree/">Dale Barr: No more excuses! R is better than SPSS for psychology undergrads, and students agree</a></p></li>
+<li><p><a href="http://onlinelibrary.wiley.com/doi/10.1111/insr.12028/abstract">Grolemund, G. &amp; Wickham, H. (2014). A cognitive interpretation of data analysis. <em>International Statistical Review</em>, <em>82</em>, 184–204</a></p></li>
+<li><p><a href="http://escholarship.org/uc/item/90b2f5xh">Baumer, B., Çetinkaya-Rundel, M., Bray, A., Loi, L., &amp; Horton, N. (2014). RMarkdown: Integrating a Reproducible Analysis Tool into Introductory Statistics. <em>Technology Innovations in Statistics Education</em>, <em>8</em>(1)</a></p></li>
+<li><p><a href="http://varianceexplained.org/r/teach-tidyverse/">David Robinson: Teach the tidyverse to beginners</a></p></li>
+</ul>
+</div>
 
 
 
