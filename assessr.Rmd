@@ -6,7 +6,7 @@ title: "Assessment with `assessr`"
 
 [The `assessr` package](https://github.com/dalejbarr/assessr) provides functions that enable semi-automated assessment and feedback generation for assignments prepared using RMarkdown.  The package is currently under development and should be ready for release in Fall 2018.
 
-Students receive an RMarkdown *stub* file that contains questions and named code chunks below each question. They answer the question by writing code that sets the value of a variable or generates a graph.  When they complete the assignment, they uploaded it to an "assignment" created on Moodle.
+Students receive an RMarkdown *stub* file that contains questions and named code chunks below each question. They answer the question by writing code that sets the value of a variable or generates a graph.  When they complete the assignment, they upload it to an "assignment" created on Moodle.
 
 ## Downloading assignments from moodle
 
