@@ -8,9 +8,8 @@ output:
     self_contained: no
     css: webex.css
 navbar:
-  title: Teaching Reproducible Data Analysis in R
+  title: TRDAiR
   right:
     - text: "GUPsych"
       icon: fa-home
       href: /
-
