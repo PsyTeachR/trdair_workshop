@@ -35,7 +35,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
   }
 }
 </script>
@@ -206,23 +206,23 @@ $(document).ready(function () {
 <p>Dale and Lisa are developing an R package called <a href="https://github.com/dalejbarr/webex"><code>webex</code></a> to make it easier to make web-based exercises. It provides an RMarkdown template and a few functions to make questions that automatically give feedback and hint or solution buttons.</p>
 <p>Create fill-in-the-blank questions using <code>fitb(&quot;4&quot;)</code>, providing the answer as the first argument.</p>
 <ul>
-<li>2 + 2 is <input class="solveme nospaces" size="3" answer="4"/></li>
+<li>2 + 2 is <input class='solveme nospaces' size='3' data-answer='["4"]'/></li>
 </ul>
 <p>You can also create these questions dynamically, using variables from your R session.</p>
 <pre class="r"><code>x &lt;- sample(2:8, 1)
 fitb(x)</code></pre>
 <ul>
-<li>The square root of 36 is: <input class="solveme nospaces" size="3" answer="6"/></li>
+<li>The square root of 64 is: <input class='solveme nospaces' size='3' data-answer='["8"]'/></li>
 </ul>
 <p>The blanks are case-sensitive; if you don’t care about case, use the argument <code>ignore_case = TRUE</code>.</p>
 <pre class="r"><code>fitb(&quot;E&quot;, ignore_case = TRUE)</code></pre>
 <ul>
-<li>What is the letter after D? <input class="solveme nospaces ignorecase" size="3" answer="E"/></li>
+<li>What is the letter after D? <input class='solveme nospaces ignorecase' size='3' data-answer='["E"]'/></li>
 </ul>
 <p>You can set more than one possible correct answer by setting the answers as a vector.</p>
 <pre class="r"><code>fitb(c(&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;O&quot; , &quot;U&quot;), ignore_case = TRUE)</code></pre>
 <ul>
-<li>Type a vowel: <input class="solveme nospaces ignorecase" size="3" answer="A :or: E :or: I :or: O :or: U"/></li>
+<li>Type a vowel: <input class='solveme nospaces ignorecase' size='3' data-answer='["A","E","I","O","U"]'/></li>
 </ul>
 <p>If you want to ignore differences in whitespace use, use the argument <code>ignore_ws = TRUE</code> and include spaces in your answer anywhere they could be acceptable. Note, you need to escape double quotes inside of a quoted string using a backslash like this: <code>&quot;I am using \&quot;quotes\&quot; in my quoted string&quot;</code>.</p>
 <pre class="r"><code>answers &lt;- c(
@@ -231,7 +231,7 @@ fitb(x)</code></pre>
 )
 fitb(answers, ignore_case = TRUE, width = &quot;20&quot;)</code></pre>
 <ul>
-<li>How do you load the tidyverse package? <input class="solveme nospaces ignorecase" size="20" answer="library( tidyverse ) :or: library( "tidyverse" )"/></li>
+<li>How do you load the tidyverse package? <input class='solveme nospaces ignorecase' size='20' data-answer='["library( tidyverse )","library( \"tidyverse\" )"]'/></li>
 </ul>
 <p>Create multiple choice questions using <code>mcq(c(answer = &quot;correct answer&quot;, &quot;incorrect 1&quot;, &quot;incorrect 2&quot;))</code>.</p>
 <pre class="r"><code>lyrics &lt;- c(
@@ -242,12 +242,12 @@ fitb(answers, ignore_case = TRUE, width = &quot;20&quot;)</code></pre>
 )
 mcq(lyrics)</code></pre>
 <ul>
-<li><p>“Never gonna give you up, never gonna: <select class="solveme" answer="let you down"> <option></option> <option>let you down</option> <option>let you go</option> <option>turn you down</option> <option>run away</option> </select>”</p></li>
-<li><p>“I <select class="solveme" answer="bless the rains"> <option></option> <option>left the reigns</option> <option>bless the rains</option> <option>guess it rains</option> <option>sense the rain</option> <option>bless the waves</option> </select> down in Africa” –Toto</p></li>
+<li><p>“Never gonna give you up, never gonna: <select class='solveme' data-answer='["let you down"]'> <option></option> <option>let you down</option> <option>let you go</option> <option>turn you down</option> <option>run away</option> </select>”</p></li>
+<li><p>“I <select class='solveme' data-answer='["bless the rains"]'> <option></option> <option>left the reigns</option> <option>bless the rains</option> <option>guess it rains</option> <option>sense the rain</option> <option>bless the waves</option> </select> down in Africa” –Toto</p></li>
 </ul>
 <p>If your options are just true or false, you can make a quick MCQ with <code>torf(TRUE)</code> or <code>torf(FALSE)</code></p>
 <ul>
-<li>You can permute values in a vector using <code>sample()</code>. <select class="solveme" answer="TRUE"> <option></option> <option>TRUE</option> <option>FALSE</option> </select></li>
+<li>You can permute values in a vector using <code>sample()</code>. <select class='solveme' data-answer='["TRUE"]'> <option></option> <option>TRUE</option> <option>FALSE</option> </select></li>
 </ul>
 <p>Webex also lets you make hidden solutions and hints by surrounding the hint or answer with <code>hide(&quot;Button Text&quot;)</code> and <code>unhide()</code>.</p>
 <ul>
@@ -279,16 +279,16 @@ Solution
 <ol start="2" style="list-style-type: decimal">
 <li>Create a new RMarkdown file</li>
 </ol>
-<p><img src="images/new_rmarkdown.png" style="max-width: 500px" /></p>
+<p><img src="images/new_rmarkdown.png" width="769" style="max-width: 500px" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Select the “Web Exercises” template.</li>
 </ol>
-<p><img src="images/webex_template.png" style="max-width: 500px;" /></p>
+<p><img src="images/webex_template.png" width="533" style="max-width: 500px;" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Edit the template with your content. Leave the <code>setup</code> chunk of code at the top.</p></li>
 <li><p>Knit to HTML</p></li>
 </ol>
-<p><img src="images/knit_webex.png" style="max-width: 500px" /></p>
+<p><img src="images/knit_webex.png" width="890" style="max-width: 500px" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Open the new .html file in your web browser.</li>
 </ol>

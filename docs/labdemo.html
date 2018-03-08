@@ -35,7 +35,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
   }
 }
 </script>
@@ -224,10 +224,10 @@ $(document).ready(function () {
 <pre class="r"><code>library(&quot;tidyverse&quot;)</code></pre>
 <p>Before doing any coding we will start off by briefly looking at a couple of examples of probability, based on the preclass activity, to make sure you have understood it. Just select the correct answer from the dropdown menus - they will turn blue if you are correct. Also, keep in mind that R can be used as a calculator (e.g. <code>calculation &lt;-  4 + 3</code>) if you want to run some quick maths. See the hints below the questions if you are unsure.</p>
 <ol style="list-style-type: decimal">
-<li><p>What is the probability of rolling a 4 on a single roll of one six-sided dice? <select class="solveme" answer="1/6"> <option></option> <option>1/2</option> <option>1/3</option> <option>1/4</option> <option>1/6</option> </select></p></li>
-<li><p>What is the probability of rolling a 4, 5 <em>or</em> 6 on a single roll? <select class="solveme" answer="1/2"> <option></option> <option>1/2</option> <option>1/3</option> <option>1/4</option> <option>1/6</option> </select></p></li>
-<li>The combined probability of two outcomes is calculated by <select class="solveme" answer="multiplying"> <option></option> <option>adding</option> <option>subtracting</option> <option>multiplying</option> <option>dividing</option> </select> the individual probabilities!</li>
-<li><p>Based on your answer to question 3, to three decimal places, what is the probability of rolling a 4 <em>and then</em> a 6 straight after? <select class="solveme" answer=".028"> <option></option> <option>.028</option> <option>.333</option> <option>.000</option> <option>1.000</option> </select></p></li>
+<li><p>What is the probability of rolling a 4 on a single roll of one six-sided dice? <select class='solveme' data-answer='["1/6"]'> <option></option> <option>1/2</option> <option>1/3</option> <option>1/4</option> <option>1/6</option> </select></p></li>
+<li><p>What is the probability of rolling a 4, 5 <em>or</em> 6 on a single roll? <select class='solveme' data-answer='["1/2"]'> <option></option> <option>1/2</option> <option>1/3</option> <option>1/4</option> <option>1/6</option> </select></p></li>
+<li>The combined probability of two outcomes is calculated by <select class='solveme' data-answer='["multiplying"]'> <option></option> <option>adding</option> <option>subtracting</option> <option>multiplying</option> <option>dividing</option> </select> the individual probabilities!</li>
+<li><p>Based on your answer to question 3, to three decimal places, what is the probability of rolling a 4 <em>and then</em> a 6 straight after? <select class='solveme' data-answer='[".028"]'> <option></option> <option>.028</option> <option>.333</option> <option>.000</option> <option>1.000</option> </select></p></li>
 </ol>
 <div class="solution">
 <button>
@@ -326,9 +326,9 @@ I need a hint!
 <div id="check-your-understanding" class="section level3">
 <h3>Check your understanding</h3>
 <ol style="list-style-type: lower-alpha">
-<li><p>The probability of obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1% <select class="solveme" answer="TRUE"> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
-<li><p>Given that we obtained <select class="solveme" answer="10"> <option></option> <option>1</option> <option>10</option> <option>15</option> <option>60</option> </select> faces in our block, the probability of which to two decimal places is <input class="solveme nospaces" size="3" answer=".01"/>, indicates that obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1%. True or False? <select class="solveme" answer="TRUE"> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
-<li><p>Therefore it is <select class="solveme" answer="likely"> <option></option> <option>likely</option> <option>unlikely</option> </select> that there is an issue in the set-up of our experiment.</p></li>
+<li><p>The probability of obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1% <select class='solveme' data-answer='["TRUE"]'> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
+<li><p>Given that we obtained <select class='solveme' data-answer='["10"]'> <option></option> <option>1</option> <option>10</option> <option>17</option> <option>60</option> </select> faces in our block, the probability of which to two decimal places is <input class='solveme nospaces' size='3' data-answer='[".01"]'/>, indicates that obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1%. True or False? <select class='solveme' data-answer='["TRUE"]'> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
+<li><p>Therefore it is <select class='solveme' data-answer='["likely"]'> <option></option> <option>likely</option> <option>unlikely</option> </select> that there is an issue in the set-up of our experiment.</p></li>
 </ol>
 </div>
 <div id="binom-pbinom-qbinom" class="section level2">
@@ -358,9 +358,9 @@ I need a hint!
 <div id="check-your-understanding-2" class="section level3">
 <h3>Check your understanding 2</h3>
 <ol style="list-style-type: lower-alpha">
-<li><p>Which function is equivalent to returning the height of a column in a distribution? <select class="solveme" answer="dbinom"> <option></option> <option>rbinom</option> <option>dbinom</option> <option>qbinom</option> <option>pbinom</option> </select></p></li>
-<li><p>Which function returns the summed probabilities in a distribution? <select class="solveme" answer="pbinom"> <option></option> <option>rbinom</option> <option>dbinom</option> <option>qbinom</option> <option>pbinom</option> </select></p></li>
-<li><p>When using <code>pbinom</code> to find the probability of values less than or equal to some X value, the argument <code>lower.tail</code> should be set to <select class="solveme" answer="TRUE"> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
+<li><p>Which function is equivalent to returning the height of a column in a distribution? <select class='solveme' data-answer='["dbinom"]'> <option></option> <option>rbinom</option> <option>dbinom</option> <option>qbinom</option> <option>pbinom</option> </select></p></li>
+<li><p>Which function returns the summed probabilities in a distribution? <select class='solveme' data-answer='["pbinom"]'> <option></option> <option>rbinom</option> <option>dbinom</option> <option>qbinom</option> <option>pbinom</option> </select></p></li>
+<li><p>When using <code>pbinom</code> to find the probability of values less than or equal to some X value, the argument <code>lower.tail</code> should be set to <select class='solveme' data-answer='["TRUE"]'> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
 </ol>
 <p>Congratulations. You have now completed the Lab demonstration.</p>
 </div>
