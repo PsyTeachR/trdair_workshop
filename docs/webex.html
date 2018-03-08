@@ -211,27 +211,27 @@ $(document).ready(function () {
 <p>You can also create these questions dynamically, using variables from your R session.</p>
 <pre class="r"><code>x &lt;- sample(2:8, 1)</code></pre>
 <ul>
-<li>The square root of 25 is: <input class='solveme nospaces' size='3' data-answer='["5"]'/></li>
+<li>The square root of 4 is: <input class='solveme nospaces' size='3' data-answer='["2"]'/></li>
 </ul>
 <p>The blanks are case-sensitive; if you don’t care about case, use the argument <code>ignore_case = TRUE</code>.</p>
 <p><code>fitb(&quot;E&quot;, ignore_case = TRUE)</code></p>
 <ul>
 <li>What is the letter after D? <input class='solveme nospaces ignorecase' size='3' data-answer='["E"]'/></li>
 </ul>
-<p>If you want to ignore differences in whitespace use, use the argument <code>ignore_ws = TRUE</code> and include spaces in your answer anywhere they could be acceptable.</p>
-<p><code>fitb(&quot;library( tidyverse )&quot;, ignore_case = TRUE, width = &quot;20&quot;)</code></p>
-<ul>
-<li>How do you load the tidyverse package? <input class='solveme nospaces ignorecase' size='20' data-answer='["library( tidyverse )"]'/></li>
-</ul>
 <p>You can set more than one possible correct answer by setting the answers as a vector.</p>
 <p><code>fitb(c(&quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;O&quot; , &quot;U&quot;), ignore_case = TRUE)</code></p>
 <ul>
 <li>Type a vowel: <input class='solveme nospaces ignorecase' size='3' data-answer='["A","E","I","O","U"]'/></li>
 </ul>
+<p>If you want to ignore differences in whitespace use, use the argument <code>ignore_ws = TRUE</code> and include spaces in your answer anywhere they could be acceptable. Note, you need to escape double quotes inside of a quoted string using a backslash like this: <code>&quot;I am using \&quot;quotes\&quot; in my quoted string&quot;</code>.</p>
+<p><code>fitb(c(&quot;library( tidyverse )&quot;, &quot;library( \&quot;tidyverse\&quot; )&quot;), ignore_case = TRUE, width = &quot;20&quot;)</code></p>
+<ul>
+<li>How do you load the tidyverse package? <input class='solveme nospaces ignorecase' size='20' data-answer='["library( tidyverse )","library( \"tidyverse\" )"]'/></li>
+</ul>
 <p>Create multiple choice questions using <code>mcq(c(answer = &quot;correct answer&quot;, &quot;incorrect 1&quot;, &quot;incorrect 2&quot;))</code>.</p>
 <ul>
 <li>“Never gonna give you up, never gonna: <select class='solveme' data-answer='["let you down"]'> <option></option> <option>let you down</option> <option>let you go</option> <option>turn you down</option> <option>run away</option> </select>”</li>
-<li>“I <select class='solveme' data-answer='["bless the rains"]'> <option></option> <option>bless the rains</option> <option>guess it rains</option> <option>sense the rain</option> <option>bless the waves</option> </select> down in Africa” -Toto</li>
+<li>“I <select class='solveme' data-answer='["bless the rains"]'> <option></option> <option>left the reigns</option> <option>bless the rains</option> <option>guess it rains</option> <option>sense the rain</option> <option>bless the waves</option> </select> down in Africa” -Toto</li>
 </ul>
 <p>If your options are just true or false, you can make a quick MCQ with <code>torf(TRUE)</code> or <code>torf(FALSE)</code></p>
 <ul>
