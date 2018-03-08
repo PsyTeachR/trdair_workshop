@@ -10,7 +10,7 @@
 #+REVEAL_MARGIN: -1
 #+REVEAL_MIN_SCALE: -1
 #+REVEAL_MAX_SCALE: -1
-#+REVEAL_ROOT: file:///home/dalebarr/reveal.js
+#+REVEAL_ROOT: file:reveal.js
 #+REVEAL_TRANS: none
 #+REVEAL_SPEED: default
 #+REVEAL_THEME: moon
