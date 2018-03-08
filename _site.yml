@@ -6,6 +6,7 @@ output:
     theme: flatly
     lib_dir: site_libs
     self_contained: no
+    css: webex.css
 navbar:
   title: Teaching Reproducible Data Analysis in R
   right:

@@ -1,3 +1,9 @@
+@media screen and (max-width: 600px) {
+  embed {
+    height: 250px;
+  }
+}
+
 /* styles for solveme */
 .solveme { border: 2px dotted red; }
 .solveme.correct { border: 2px solid blue; }
