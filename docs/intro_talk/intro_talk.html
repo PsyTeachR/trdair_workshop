@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Teaching Reproducible Data Analysis in R</title>
+<meta name="author" content="(School of Psychology Teaching Team)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home/dalebarr/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home/dalebarr/reveal.js/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///home/dalebarr/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="trdair_2.jpg" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition=""><h1 class="title">Teaching Reproducible Data Analysis in R</h1><h2 class="author">School of Psychology Teaching Team</h2><h2 class="date">2018-03-09 Fri 00:00</h2><p class="date">Created: 2018-03-08 Thu 15:41</p>
+</section>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org0279184" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org0279184"></h3>
+<p>
+<b>It&rsquo;s not just about changing what you teach&#x2026;</b>
+</p>
+
+<p>
+<b>it&rsquo;s about building a community</b>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org21b697d" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org21b697d"></h3>
+<p>
+<b>It&rsquo;s not just about R, it&rsquo;s about:</b>
+</p>
+
+<ul>
+<li>building confidence and independence</li>
+<li>enabling more efficient data analysis workflows</li>
+<li>instilling values of reproducibility and transparency</li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org06e0d22" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org06e0d22">WHY, WHAT, and HOW</h3>
+<ul>
+<li>our backstory</li>
+<li>what flavor of R to teach</li>
+<li>how to teach it</li>
+
+</ul>
+
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgcaddb80" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="orgcaddb80">WHY?</h2>
+<div class="outline-text-2" id="text-orgcaddb80">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgef60819" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="orgef60819"></h3>
+
+<div class="figure">
+<p><img src="messy_data.png" alt="messy_data.png" />
+</p>
+</div>
+
+<p>
+&ldquo;I want to have the data file so there are only 4 columns - PARTICIPANT CODE, CONDITION, X, Y.&rdquo;
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org76b1fed" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org76b1fed"></h3>
+<p>
+<img src="messy_data2.png" alt="messy_data2.png" />
+<img src="messy_data2b.png" alt="messy_data2b.png" />
+</p>
+
+<p>
+<a href="http://talklab.psy.gla.ac.uk/r_training/scoring_the_AQ/">http://talklab.psy.gla.ac.uk/r_training/scoring_the_AQ/</a>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orga6867c3" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="orga6867c3">Data comprehension</h3>
+
+<div class="figure">
+<p><img src="data-science.png" alt="data-science.png" />
+</p>
+</div>
+
+<p>
+Grolemund &amp; Wickham, <a href="http://r4ds.had.co.nz/">R for Data Science</a>
+</p>
+
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgbaaded8" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="orgbaaded8">WHAT?</h2>
+<div class="outline-text-2" id="text-orgbaaded8">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org4bb03d6" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org4bb03d6">What flavor of R?</h3>
+
+<div class="figure">
+<p><img src="flavor_of_r.png" alt="flavor_of_r.png" />
+</p>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orge1ee499" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="orge1ee499">Reproducible Reports in RMarkdown</h3>
+
+<div class="figure">
+<p><img src="rmarkdown_1.png" alt="rmarkdown_1.png" />
+</p>
+</div>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgae82b4f" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="orgae82b4f"></h3>
+
+<div class="figure">
+<p><img src="rmarkdown.png" alt="rmarkdown.png" />
+</p>
+</div>
+
+<p>
+Baumer, Cetinkaya-Rundel, Bray, Loi, &amp; Horton (2014)
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org5224dc4" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org5224dc4">Tidyverse first!</h3>
+<ul>
+<li><b>Tidy Data</b>
+<ul>
+<li>Rows = observations</li>
+<li>Columns = variables</li>
+<li>Table = observation unit</li>
+
+</ul></li>
+
+<li><b>Tidy Tools</b>
+<ul>
+<li>tidy input &#x2013;&gt; tidy output</li>
+
+</ul></li>
+
+<li><b>Visualization with <code>ggplot2</code></b></li>
+
+</ul>
+
+<p>
+<a href="http://varianceexplained.org/r/teach-tidyverse/">http://varianceexplained.org/r/teach-tidyverse/</a>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org3ef1e25" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org3ef1e25">The &ldquo;Wickham Six&rdquo; dplyr verbs</h3>
+<p>
+<i>Six verbs cover 90% of data tidying</i> - Hadley Wickham
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><code>select()</code></td>
+<td class="org-left">choose columns</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>filter()</code></td>
+<td class="org-left">choose rows</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>mutate()</code></td>
+<td class="org-left">create new columns</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>arrange()</code></td>
+<td class="org-left">sort the rows</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>group_by()</code></td>
+<td class="org-left">establish groups</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>summarise()</code></td>
+<td class="org-left">summarise data/groups</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>also: combining data sources, restructuring data</li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org7419b2a" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org7419b2a">The programme</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Y1</td>
+<td class="org-left">R/RStudio/RMarkdown, data import, tidying, viz, probability &amp; descriptive stats</td>
+</tr>
+
+<tr>
+<td class="org-left">Y2</td>
+<td class="org-left">sampling distributions, GLM, correlation, regression, t-test, data simulation</td>
+</tr>
+
+<tr>
+<td class="org-left">Y3</td>
+<td class="org-left">mixed-model ANOVA, multilevel regression</td>
+</tr>
+
+<tr>
+<td class="org-left">Y4</td>
+<td class="org-left">advanced topics (factor analysis, psychometrics, etc)</td>
+</tr>
+</tbody>
+</table>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org794d368" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h2 id="org794d368">HOW?</h2>
+<div class="outline-text-2" id="text-org794d368">
+</div>
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgc41e59e" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="orgc41e59e">Making the transition</h3>
+<ul>
+<li><i>Ongoing</i>: stats journal club</li>
+
+<li>R/RStudio training sessions</li>
+
+<li>Phase in gradually
+<ul>
+<li>translate descriptive/inferential stats materials into R</li>
+<li>introduce data wrangling labs at intro level</li>
+
+</ul></li>
+
+<li>Support staff and students using <a href="http://www.slack.com/">slack.com</a> messaging 
+<ul>
+<li>separate workspaces for staff and students</li>
+
+</ul></li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org436281d" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org436281d">How do we get staff to buy in to using R?</h3>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orga474976" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="orga474976">Solution: Embed R into teaching</h3>
+<ul>
+<li><a href="https://debruine.github.io/">generating academic web pages on github</a></li>
+<li><a href="http://talklab.psy.gla.ac.uk/r_training/marking/index.html">using R in marking</a></li>
+<li><a href="http://talklab.psy.gla.ac.uk/r_training/moodle/index.html">tracking student engagement with Moodle logs</a></li>
+<li><a href="http://www.r-exams.org/">make exams with the <code>exams</code> package</a></li>
+<li><a href="https://gupsych.github.io/trdair_workshop/webex.html">generate self-guided web exercises with RMarkdown and <code>webex</code></a></li>
+<li><a href="https://github.com/dalejbarr/assessr">semi-automated assessment/feedback on RMarkdown-based assignments with <code>assessr</code></a></li>
+
+</ul>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-org43ef69a" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="org43ef69a"></h3>
+<p>
+<b>WHEN?</b> <i>ASAP!</i>
+</p>
+
+<p>
+<b>WHERE?</b> <i>EVERYWHERE!</i>
+</p>
+
+<div class="slide-footer"></div>
+</section>
+<section id="slide-orgfe1a50c" data-background="" data-background-size="" data-background-position="" data-background-repeat="" data-background-transition="">
+<div class="slide-header"></div>
+<h3 id="orgfe1a50c">Today&rsquo;s schedule</h3>
+<small>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">09:00 - 09:30</td>
+<td class="org-left">Coffee and chat (58 Hillhead Street)</td>
+</tr>
+
+<tr>
+<td class="org-left">09:30 - 10:00</td>
+<td class="org-left">Introduction and philosophy</td>
+</tr>
+
+<tr>
+<td class="org-left">10:00 - 10:30</td>
+<td class="org-left">Our approach</td>
+</tr>
+
+<tr>
+<td class="org-left">10:30 - 10:45</td>
+<td class="org-left">Coffee and chat</td>
+</tr>
+
+<tr>
+<td class="org-left">10:45 - 11:15</td>
+<td class="org-left">Practicalities</td>
+</tr>
+
+<tr>
+<td class="org-left">11:15 - 11:45</td>
+<td class="org-left">Staff skill development</td>
+</tr>
+
+<tr>
+<td class="org-left">11:45 - 12:15</td>
+<td class="org-left">Student engagement</td>
+</tr>
+
+<tr>
+<td class="org-left">12:15 - 13:00</td>
+<td class="org-left">Lunch (move to Boyd Orr)</td>
+</tr>
+
+<tr>
+<td class="org-left">13:00 - 14:00</td>
+<td class="org-left">Lab demo</td>
+</tr>
+
+<tr>
+<td class="org-left">14:00 - 14:30</td>
+<td class="org-left">Coffee and questions</td>
+</tr>
+
+<tr>
+<td class="org-left">14:30 - 15:00</td>
+<td class="org-left">Assessment with assessr</td>
+</tr>
+
+<tr>
+<td class="org-left">15:00 - 15:30</td>
+<td class="org-left">Web exercises with webex</td>
+</tr>
+
+<tr>
+<td class="org-left">15:30 - 16:30</td>
+<td class="org-left">Wine and discussion</td>
+</tr>
+</tbody>
+</table>
+
+</small>
+<div class="slide-footer"></div>
+</section>
+</section>
+</div>
+</div>
+<script src="file:///home/dalebarr/reveal.js/lib/js/head.min.js"></script>
+<script src="file:///home/dalebarr/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: false,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///home/dalebarr/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'file:///home/dalebarr/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/dalebarr/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/dalebarr/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///home/dalebarr/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+,});
+</script>
+</body>
+</html>
