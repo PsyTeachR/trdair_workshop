@@ -1,7 +1,16 @@
+#twitter {
+  float: right; 
+  width: 50%;
+}
+#scheduler {
+  float: left; 
+  width: 50%;
+}
 @media screen and (max-width: 600px) {
   embed {
     height: 250px;
   }
+  #twitter, #scheduler { width: 100%; }
 }
 
 /* styles for solveme */
