@@ -1,6 +1,5 @@
 #+TITLE: Teaching Reproducible Data Analysis in R
 #+AUTHOR: School of Psychology Teaching Team
-#+DATE: [2018-03-09 Fri]
 #+OPTIONS: num:nil toc:nil H:2
 #+OPTIONS: reveal_center:t reveal_control:t reveal_height:-1
 #+OPTIONS: reveal_history:nil reveal_keyboard:t reveal_overview:t
