@@ -35,7 +35,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
   }
 }
 </script>
@@ -327,7 +327,7 @@ I need a hint!
 <h3>Check your understanding</h3>
 <ol style="list-style-type: lower-alpha">
 <li><p>The probability of obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1% <select class='solveme' data-answer='["TRUE"]'> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
-<li><p>Given that we obtained <select class='solveme' data-answer='["10"]'> <option></option> <option>1</option> <option>10</option> <option>16</option> <option>60</option> </select> faces in our block, the probability of which to two decimal places is <input class='solveme nospaces' size='3' data-answer='[".01"]'/>, indicates that obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1%. True or False? <select class='solveme' data-answer='["TRUE"]'> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
+<li><p>Given that we obtained <select class='solveme' data-answer='["10"]'> <option></option> <option>1</option> <option>10</option> <option>21</option> <option>60</option> </select> faces in our block, the probability of which to two decimal places is <input class='solveme nospaces' size='3' data-answer='[".01"]'/>, indicates that obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1%. True or False? <select class='solveme' data-answer='["TRUE"]'> <option></option> <option>TRUE</option> <option>FALSE</option> </select></p></li>
 <li><p>Therefore it is <select class='solveme' data-answer='["likely"]'> <option></option> <option>likely</option> <option>unlikely</option> </select> that there is an issue in the set-up of our experiment.</p></li>
 </ol>
 </div>
@@ -418,8 +418,8 @@ Solution pbinom
 </div>
 <div id="notes" class="section level3">
 <h3>Notes</h3>
-<p>This page was created using a Web Exercise template created by the <a href="http://www.psy.gla.ac.ukUniversity%20of%20Glasgow">psychology teaching team at the University of Glasgow</a>, based on ideas by <a href="https://software-carpentry.org/lessons/">Software Carpentry</a>. This template enables instructors to easily create web documents that students can use in self-assessment.</p>
-<p>The webex package provides a number of functions that you use in <a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">inline R code</a> to create HTML widgets (text boxes, pull down menus, buttons that reveal hidden content). Examples are provided in this document. Knit this file to HTML to see how it works.</p>
+<p>This page was created using a Web Exercise template created by the <a href="http://www.psy.gla.ac.uk">psychology teaching team at the University of Glasgow</a>, inspired by <a href="https://software-carpentry.org/lessons/">Software Carpentry</a> webpages. This template enables instructors to easily create web documents that students can use in self-assessment.</p>
+<p>The <a href="https://github.com/dalejbarr/webex">webex package</a> provides a number of functions that you use in <a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">inline R code</a> to create HTML widgets (text boxes, pull down menus, buttons that reveal hidden content). Examples are provided in this document. Knit this file to HTML to see how it works.</p>
 <p><em>NOTE: If the widgets don’t work for you in the built-in RStudio browser, open the HTML file in a different browser.</em></p>
 </div>
 </div>
