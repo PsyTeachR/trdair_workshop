@@ -40,6 +40,7 @@
 #+REVEAL_INIT_SCRIPT:
 #+REVEAL_HIGHLIGHT_CSS: %r/lib/css/zenburn.css
 #+REVEAL_EXTRA_JS: { src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } }
+#+BIND: org-reveal-title-slide "%t"
 
 ** 
 
@@ -153,14 +154,23 @@ http://varianceexplained.org/r/teach-tidyverse/
 
 ** Solution: Embed R into teaching
 
-- [[https://gupsych.github.io/acadweb][generating academic web pages on github with RMarkdown]]
-- [[http://talklab.psy.gla.ac.uk/r_training/marking/index.html][using R in marking]]
-- [[http://talklab.psy.gla.ac.uk/r_training/moodle/index.html][tracking student engagement with Moodle logs]]
+- [[https://debruine.github.io][generating academic web pages on github]]
+- [[http://gupsych.github.io/trdair_workshop/staff_training/marking][using R in marking]]
+- [[http://gupsych.github.io/trdair_workshop/staff_training/moodle][tracking student engagement with Moodle logs]]
 - [[http://www.r-exams.org][make exams with the =exams= package]]
 - [[https://gupsych.github.io/trdair_workshop/webex.html][generate self-guided web exercises with RMarkdown and =webex=]]
-- [[https://github.com/dalejbarr/assessr][semi-automated assessment/feedback on RMarkdown-based assignments with =assessr=]]
+- [[https://gupsych.github.io/trdair_workshop/assessr.html][semi-automated assessment/feedback on RMarkdown-based assignments with =assessr=]]
 
 ** 
+   :PROPERTIES:
+   :ATTR_REVEAL: :frag frag-style
+   :END:
+
+*WHY?* /reproducibility, efficiency, competence, confidence/
+
+*WHAT?* /data wrangling, R + RStudio + RMarkdown + tidyverse/
+
+*HOW?* /gradually, embed R in everyday practice/
 
 *WHEN?* /ASAP!/
 

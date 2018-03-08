@@ -1,3 +1,220 @@
 ---
-title: "Lab demo" 
+title: "Lab Demonstation: 'Probability' Inclass activity"
+subtitle: "School of Psychology, University of Glasgow"
+output:
+  html_document:
+    css: webex.css
+    includes:
+      after_body: webex.js
 ---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!requireNamespace("webex")) {
+  stop("You must have the 'webex' package installed to knit HTML from this template.\n   devtools::install_github(\"dalejbarr/webex\")")
+} else {
+  library("webex")
+}
+```
+
+### General Lab Layout
+
+Over the course of the year our prehonours students all complete a series of labs that are designed to help them develop and expand their understanding of research methods, research practices, and research analysis. There are 6 of these labs in Year 1 (3 per Semester) and 18 of these labs in Year 2 (9 per semester).  Within each lab a certain length of time (e.g. 1hr) is given over to elements related to analysis including: reproducible coding; data-wrangling; generating figures; probability; power and effect sizes; distributions; descriptives; inferentials; General Linear Model.  
+
+All the labs have the format of:
+
+* **Preclass Activity:** Generally a highly scaffolded activity showing the basics of how to use certain functions or how to understand certain tests. In later labs this is replaced by reading appropriate chapters or blog sites.
+* **Inclass Activity:** Less scaffolded activity based around the preclass activity. Often used to tests students understanding but at the same time offer them the solutions to help them along and to consolidate their learning. By the end of inclass and preclass activities students should be ready to complete the homework.
+* **Homework Assignment:** A series of questions and activities that test students' understanding of the lab they have just completed. Often involves creating code chunks, plotting figures, answering multiple choice questions, and even writing short paragraphs.
+
+### The Lab Demonstration
+
+For this Lab demonstartion we are using an updated version of the 4th inclass activity from our Year 2 course, Semester 1 - as such the wording assumes you have completed the preclass activity for this lab which focussed on explaining probability via the binomial distribution and coin tosses. By this stage in their development students have already been introduced to RMarkdown, installing and loading libraries, data-wrangling and the Wickham six verbs, and generating figures through ggplot.
+
+### Back to basic probability
+
+In nearly all the labs this year we will need the `tidyverse` to complete our activities. Start a new script or Rmd file and copy and run the below line to bring the tidyverse into our working environment.
+
+```{r, warning = FALSE, message = FALSE}
+library("tidyverse")
+```
+
+Before doing any coding we will start off by briefly looking at a couple of examples of probability, based on the preclass activity, to make sure you have understood it. Just select the correct answer from the dropdown menus - they will turn blue if you are correct. Also, keep in mind that R can be used as a calculator (e.g. `calculation <-  4 + 3`) if you want to run some quick maths. See the hints below the questions if you are unsure.
+
+1. What is the probability of rolling a 4 on a single roll of one six-sided dice? `r mcq(c("1/2", "1/3", "1/4", answer = "1/6"))`   
+2. What is the probability of rolling a 4, 5 *or* 6 on a single roll? `r mcq(c(answer = "1/2", "1/3", "1/4", "1/6"))`
+3. The combined probability of two outcomes is calculated by `r mcq(c("adding", "subtracting", answer = "multiplying", "dividing"))`the individual probabilities! 
+4. Based on your answer to question 3, to three decimal places, what is the probability of rolling a 4 *and then* a 6 straight after? `r mcq(c(answer = ".028", ".333", ".000", "1.000"))`
+
+`r hide("Hint for Question 1")` One possible outcome from six `r unhide()`
+`r hide("Hint for Question 2")` Three possible outcomes from six `r unhide()`
+`r hide("Hint for Question 3")` Combining probabilities should make things more unlikely but still possible `r unhide()`
+`r hide("Hint for Question 4")` The probability of Question 1 by the probability of Question 1`r unhide()`
+
+<br></br>Great! We will now look again at the binomial distribution and test your knowledge of probability and of coding. We covered this in the preclass activity so refer back to that or the supplied hints should you get stuck. S
+
+### Return of the Binomial
+
+You design a psychology experiment where you are interested in how quickly people spot faces. Using a standard task you compare images of faces, houses and noise patterns and you ask participants to respond `face` or `not`. You set the experiment so that across the whole experiment the number of images per stimuli type are evenly split (1/3 per type) but not necessarily evenly split across the three stimuli in any one block. Each block contains 60 trials. To test your experiment you run one block and get concerned that you only saw 10 faces and thought something might be wrong. You decide to create a probabiliy distribution for one block to test the likelihood of seeing a face (coded as 1) versus not seeing a face (coded as 0).
+
+1. You start off with the below `sample()` function but it is incomplete. Replace both the `NULL` to establish an estimate of how many faces you would likely see in 1 block of 60 trials. **Note that the probability (prob) is set to weight "not seeing a face" (2/3) more than "seeing a face" (1/3).**
+
+```{r b1, eval = FALSE}
+sample(0:1, NULL, replace = NULL, prob = c(2/3, 1/3)) %>% sum()
+```
+`r hide("I need a hint!")`
+* NULL 1 - How many trials are there?
+* NULL 2 - On each trial, TRUE or FALSE, do you want both 0 and 1 as an option?
+`r unhide()`
+
+```{r b1_faker, include = FALSE, eval = TRUE}
+# this creates a number that will be close to one the students create and will be used later as a distractor. Note that it wont be the same but might be for some students by chance.
+faker <- sample(0:1, 60, replace = TRUE, prob = c(2/3, 1/3)) %>% sum()
+```
+<br></br>
+2. So we now have a rough number of how many times a face will likely have been seen in a block. But we want to know how that compares to our actual count of 10 faces when we ran the experiment. To do this we will need to create a distribution. Replacing the NULL and saving your result as `blocks_5k`, use the `replicate` function to repeat the test in Step 1 for 5000 blocks of 60 trials.
+
+```{r b2}
+blocks_5k <- NULL
+```
+
+`r hide("I need a hint!")`
+* ?replicate
+* replicate(N, function)
+`r unhide()`
+<br></br>
+3. If your code has worked so far then running the below chunk should create a tibble with two columns: `faces` showing the number of faces seen in individual runs, and `n` the count if how many times that number of faces was seen. Run these lines in your code and see. If not, something has gone wrong; debug. 
+
+```{r b3, include = TRUE, eval = FALSE}
+data5K <- tibble(faces = blocks_5k) %>% 
+  count(faces) 
+```
+
+4. We now want the probability of seeing different numbers of faces within one block. To do this replace the NULL with a mutate that converts `n` to a probability and places these probabilties in a column called `p`. 
+
+```{r b4, include = TRUE}
+data5K <- NULL
+```
+
+`r hide("I need a hint!")`
+* ?mutate
+* mutate(data, new_name = maths)
+`r unhide()`
+<br></br>
+5. Now that we have our distribution we should look at it. Plot the distribution of probabilities stored within `data5K`. Add a theme of your chosing and remember to label the axes appropriately.
+
+`r hide("I need a hint!")`
+* ?ggplot
+* ggplot(data, aes(x, y))
+* Remember to add (+) your layers: geom_xxx(); labs(); theme_xx()
+`r unhide()`
+<br></br>
+6. From your `data5k` tibble, what was the probability of seeing only 10 faces in a block. Do this through a line of code, replacing the NULL, and storing the answer as a single value in `prob_10faces`. You will need the new function `pluck()`.
+
+```{r b6}
+prob_10faces <- NULL
+```
+
+`r hide("I need a hint!")`
+* ?filter
+* filter(data, column == rule)
+* ?pluck
+* pluck("column")
+`r unhide()`
+
+### Check your understanding
+
+a. The probability of obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1% `r torf(TRUE)`
+b. Given that we obtained `r mcq(c("1", answer = "10", faker, "60"))` faces in our block, the probability of which to two decimal places is `r fitb(".01")`, indicates that obtaining only 10 faces in a block of the experiment as it is currently designed is less than 1%. True or False? `r torf(TRUE)`
+c. Therefore it is `r mcq(c(answer = "likely", "unlikely"))` that there is an issue in the set-up of our experiment.
+
+## binom(), pbinom(), qbinom()
+
+An alternative to the above process would have be to use the the appropriate `binom()` function to determine the probability of 10 faces in 60 trials. Do this now, replacing the NULL in the below chunk with one line of code.
+
+```{r fun1}
+act_p_10faces <- NULL
+```
+
+`r hide("I need a hint!")`
+* ?dbinom
+* number, trials, probability of faces being shown
+`r unhide()`
+<br></br>
+And we can look at it from a different viewpoint using the `pbinom()` function. What would be the probability of seeing *more than 25 faces in a block of 60 trials*.  
+
+```{r fun2}
+act_p <- NULL 
+```
+
+`r hide("I need a hint!")`
+* ?pbinom
+* number, trials, probability of faces being shown, lower.tail for more than
+`r unhide()`
+
+### Check your understanding 2
+
+a. Which function is equivalent to returning the height of a column in a distribution? `r mcq(c("rbinom", answer = "dbinom", "qbinom", "pbinom"))`
+b. Which function returns the summed probabilities in a distribution? `r mcq(c("rbinom", "dbinom", "qbinom", answer = "pbinom"))`
+c. When using `pbinom` to find the probability of values less than or equal to some X value, the argument `lower.tail` should be set to `r mcq(c(answer = "TRUE", "FALSE"))` 
+
+Congratulations. You have now completed the Lab demonstration. 
+
+### What happens next!
+
+For homework, students would now be given a link to a ***stub*** Rmd file with similar questions as to the above where they replace the NULL in the code chunk with either the apporpriate value, function, or code. Students then complete the code chunks and submit the Rmd file to Moodle for assessment within one week as well as completing any preparation for the following lab.  Further information as regards the computer-assisted marking of these assessments will be shown in the next talk session.
+
+### Solutions
+
+`r hide("Solution Step 1")`
+```{r b1_sol, eval = FALSE}
+sample(0:1, 60, replace = TRUE, prob = c(2/3, 1/3)) %>% sum()
+```
+`r unhide()`
+
+`r hide("Solution Step 2")`
+```{r b2_sol, eval = FALSE}
+blocks_5k <- replicate(5000, sum(sample(0:1, 60, TRUE, c(2/3, 1/3))))
+```
+`r unhide()`
+
+`r hide("Solution Step 4")`
+```{r b4_sol, include = TRUE, eval = FALSE}
+data5K <- data5K %>% mutate(p = n / 5000)
+```
+`r unhide()`
+
+`r hide("Solution Step 5")`
+```{r b5_sol, include = TRUE, eval = FALSE}
+ggplot(data5K, aes(faces, p)) + 
+  geom_col() + 
+  labs(x = "Number of Faces", y = "Probability") + 
+  theme_bw()
+```
+`r unhide()`
+
+`r hide("Solution Step 6")`
+```{r b6_sol, eval=FALSE}
+prob_10faces <- filter(data5K, faces == 10) %>% pluck("p")
+```
+`r unhide()`
+
+`r hide("Solution dbinom")`
+```{r fun1_sol, eval = FALSE}
+act_p_10faces <- dbinom(10, 60, 1/3)
+```
+`r unhide()`
+
+`r hide("Solution pbinom")`
+```{r fun2_sol, eval = FALSE}
+act_p <- pbinom(26, 60, 1/3, lower.tail = FALSE)
+```
+`r unhide()`
+
+### Notes
+
+This page was created using a Web Exercise template created by the [psychology teaching team at the University of Glasgow](http://www.psy.gla.ac.ukUniversity of Glasgow), based on ideas by [Software Carpentry](https://software-carpentry.org/lessons/). This template enables instructors to easily create web documents that students can use in self-assessment.
+
+The webex package provides a number of functions that you use in [inline R code](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) to create HTML widgets (text boxes, pull down menus, buttons that reveal hidden content). Examples are provided in this document. Knit this file to HTML to see how it works.
+
+*NOTE: If the widgets don't work for you in the built-in RStudio browser, open the HTML file in a different browser.*
