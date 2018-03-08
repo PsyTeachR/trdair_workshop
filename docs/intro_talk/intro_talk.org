@@ -153,7 +153,7 @@ http://varianceexplained.org/r/teach-tidyverse/
 
 ** Solution: Embed R into teaching
 
-- [[https://debruine.github.io][generating academic web pages on github]]
+- [[https://gupsych.github.io/acadweb][generating academic web pages on github with RMarkdown]]
 - [[http://talklab.psy.gla.ac.uk/r_training/marking/index.html][using R in marking]]
 - [[http://talklab.psy.gla.ac.uk/r_training/moodle/index.html][tracking student engagement with Moodle logs]]
 - [[http://www.r-exams.org][make exams with the =exams= package]]
