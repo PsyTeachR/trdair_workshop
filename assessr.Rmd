@@ -1,3 +1,21 @@
 ---
 title: "Assessment with `assessr`" 
 ---
+
+# Background
+
+[The `assessr` package](https://github.com/dalejbarr/assessr) provides functions that enable semi-automated assessment and feedback generation for assignments prepared using RMarkdown.  The package is currently under development and should be ready for release in Fall 2018.
+
+Students receive an RMarkdown *stub* file that contains questions and named code chunks below each question. They answer the question by writing code that sets the value of a variable or generates a graph.  When they complete the assignment, they uploaded it to an "assignment" created on Moodle.
+
+## Downloading assignments from moodle
+
+`assessr` has a function `fetch()` to download the assignments from moodle all at once.  All you need to know is the internal moodle ID number for the assignment.
+
+## Automatic assessment and feedback
+
+You write assessment code in an *assessment template* that defines various tests that in turn modify certain *assessment variables*, and then run the `assess()` function, which evaluates each code chunk and modifies the variables. You can then run the `browse_assessment()` function to open a shiny app that shows all of the answers, assessment variables, and feedback for each question on a single tab.  You can manually change the assessment variables and modify the feedback.
+
+## Generating feedback reports
+
+The final stage is to use the `feedback_reports()` function to generate reports for students where they can see their code for each problem next to solution code and feedback.  These can then be zipped up and uploaded in batch to moodle.

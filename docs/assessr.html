@@ -35,7 +35,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
   }
 }
 </script>
@@ -202,7 +202,23 @@ $(document).ready(function () {
 </div>
 
 
-
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p><a href="https://github.com/dalejbarr/assessr">The <code>assessr</code> package</a> provides functions that enable semi-automated assessment and feedback generation for assignments prepared using RMarkdown. The package is currently under development and should be ready for release in Fall 2018.</p>
+<p>Students receive an RMarkdown <em>stub</em> file that contains questions and named code chunks below each question. They answer the question by writing code that sets the value of a variable or generates a graph. When they complete the assignment, they uploaded it to an “assignment” created on Moodle.</p>
+<div id="downloading-assignments-from-moodle" class="section level2">
+<h2>Downloading assignments from moodle</h2>
+<p><code>assessr</code> has a function <code>fetch()</code> to download the assignments from moodle all at once. All you need to know is the internal moodle ID number for the assignment.</p>
+</div>
+<div id="automatic-assessment-and-feedback" class="section level2">
+<h2>Automatic assessment and feedback</h2>
+<p>You write assessment code in an <em>assessment template</em> that defines various tests that in turn modify certain <em>assessment variables</em>, and then run the <code>assess()</code> function, which evaluates each code chunk and modifies the variables. You can then run the <code>browse_assessment()</code> function to open a shiny app that shows all of the answers, assessment variables, and feedback for each question on a single tab. You can manually change the assessment variables and modify the feedback.</p>
+</div>
+<div id="generating-feedback-reports" class="section level2">
+<h2>Generating feedback reports</h2>
+<p>The final stage is to use the <code>feedback_reports()</code> function to generate reports for students where they can see their code for each problem next to solution code and feedback. These can then be zipped up and uploaded in batch to moodle.</p>
+</div>
+</div>
 
 
 
