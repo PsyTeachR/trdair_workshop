@@ -2,7 +2,6 @@
 title: "Web exercises with `webex`" 
 output:
   html_document:
-    fig_width: 6 
     css: webex.css
     includes:
       after_body: webex.js
