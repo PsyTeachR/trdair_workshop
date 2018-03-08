@@ -26,8 +26,8 @@ The workshop is aimed at academics interested in making the transition to teachi
 * 10:45 - 11:15 [Practicalities](practicalities.html)
 * 11:15 - 11:45 [GTA perspective on undergrad teaching](staff.html)
 * 11:45 - 12:15 [Student perspective](students.html)
-* 12:15 - 13:00 Lunch (move to Boyd Orr)
-* 13:00 - 14:00 [Lab demo](labdemo.html)
+* 12:15 - 13:00 Lunch
+* 13:00 - 14:00 [Lab demo](labdemo.html) (move to Boyd Orr)
 * 14:00 - 14:30 Coffee and questions
 * 14:30 - 15:00 [Assessment with `assessr`](assessr.html)
 * 15:00 - 15:30 [Web exercises with `webex`](webex.html)
