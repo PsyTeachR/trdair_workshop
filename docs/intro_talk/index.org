@@ -180,18 +180,18 @@ http://varianceexplained.org/r/teach-tidyverse/
 
 #+HTML: <small>
 
-| 09:00 - 09:30 | Coffee and chat (58 Hillhead Street) |
-| 09:30 - 10:00 | Introduction and philosophy          |
-| 10:00 - 10:30 | Our approach                         |
-| 10:30 - 10:45 | Coffee and chat                      |
-| 10:45 - 11:15 | Practicalities                       |
-| 11:15 - 11:45 | Staff skill development              |
-| 11:45 - 12:15 | Student engagement                   |
-| 12:15 - 13:00 | Lunch (move to Boyd Orr)             |
-| 13:00 - 14:00 | Lab demo                             |
-| 14:00 - 14:30 | Coffee and questions                 |
-| 14:30 - 15:00 | Assessment with assessr              |
-| 15:00 - 15:30 | Web exercises with webex             |
-| 15:30 - 16:30 | Wine and discussion                  |
+| 09:00 - 09:30 | Coffee and chat (58 Hillhead Street)   |
+| 09:30 - 10:00 | Introduction and philosophy            |
+| 10:00 - 10:30 | Our approach                           |
+| 10:30 - 10:45 | Coffee and chat                        |
+| 10:45 - 11:15 | Practicalities                         |
+| 11:15 - 11:45 | GTA perspective on teaching undergrads |
+| 11:45 - 12:15 | Student perspective                    |
+| 12:15 - 13:00 | Lunch (move to Boyd Orr)               |
+| 13:00 - 14:00 | Lab demo                               |
+| 14:00 - 14:30 | Coffee and questions                   |
+| 14:30 - 15:00 | Assessment with assessr                |
+| 15:00 - 15:30 | Web exercises with webex               |
+| 15:30 - 16:30 | Wine and discussion                    |
 
 #+HTML: </small>
