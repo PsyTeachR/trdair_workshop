@@ -32,7 +32,7 @@ title: "Resources"
 
 ## On teaching R
 
-- [Evaluating the association between software choice (SPSS vs R), anxiety, and performance in an undergraduate statistics course](LTC_workshop.pdf)
+- [Barr, D. J., McAleer, P., Stack, N. & Swingler, M. V. (2016) To R or to SPSS: Does autonomous choice of learning technology affect competency and anxiety in Psychology Undergraduates? Poster presented at the 9th Annual Learning and Teaching Conference, University of Glasgow](LTC_workshop.pdf)
 
 - [Dale Barr: No more excuses! R is better than SPSS for psychology undergrads, and students agree](https://datahowler.wordpress.com/2016/09/10/no-more-excuses-r-is-better-than-spss-for-psychology-undergrads-and-students-agree/)
 
