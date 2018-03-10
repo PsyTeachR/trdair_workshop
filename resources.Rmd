@@ -28,6 +28,8 @@ title: "Resources"
 
 - [Lisa DeBruine's blog](https://debruine.github.io)
 
+- [Wickham, H. (2014). Tidy data. *The Journal of Statistical Software*, *59*, 2014](http://vita.had.co.nz/papers/tidy-data.html)
+
 ## On teaching R
 
 - [Dale Barr: No more excuses! R is better than SPSS for psychology undergrads, and students agree](https://datahowler.wordpress.com/2016/09/10/no-more-excuses-r-is-better-than-spss-for-psychology-undergrads-and-students-agree/)
