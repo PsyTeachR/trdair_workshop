@@ -35,7 +35,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
   }
 }
 </script>
@@ -206,7 +206,7 @@ $(document).ready(function () {
 <div id="background" class="section level1">
 <h1>Background</h1>
 <p><a href="https://github.com/dalejbarr/assessr">The <code>assessr</code> package</a> provides functions that enable semi-automated assessment and feedback generation for assignments prepared using RMarkdown. The package is currently under development and should be ready for release in Fall 2018.</p>
-<p>Students receive an RMarkdown <em>stub</em> file that contains questions and named code chunks below each question. They answer the question by writing code that sets the value of a variable or generates a graph. When they complete the assignment, they uploaded it to an “assignment” created on Moodle.</p>
+<p>Students receive an RMarkdown <em>stub</em> file that contains questions and named code chunks below each question. They answer the question by writing code that sets the value of a variable or generates a graph. When they complete the assignment, they upload it to an “assignment” created on Moodle.</p>
 <div id="downloading-assignments-from-moodle" class="section level2">
 <h2>Downloading assignments from moodle</h2>
 <p><code>assessr</code> has a function <code>fetch()</code> to download the assignments from moodle all at once. All you need to know is the internal moodle ID number for the assignment.</p>

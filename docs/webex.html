@@ -35,7 +35,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
   }
 }
 </script>
@@ -212,7 +212,7 @@ $(document).ready(function () {
 <pre class="r"><code>x &lt;- sample(2:8, 1)
 fitb(x)</code></pre>
 <ul>
-<li>The square root of 49 is: <input class='solveme nospaces' size='3' data-answer='["7"]'/></li>
+<li>The square root of 25 is: <input class='solveme nospaces' size='3' data-answer='["5"]'/></li>
 </ul>
 <p>The blanks are case-sensitive; if you don’t care about case, use the argument <code>ignore_case = TRUE</code>.</p>
 <pre class="r"><code>fitb(&quot;E&quot;, ignore_case = TRUE)</code></pre>
@@ -279,16 +279,16 @@ Solution
 <ol start="2" style="list-style-type: decimal">
 <li>Create a new RMarkdown file</li>
 </ol>
-<p><img src="images/new_rmarkdown.png" width="769" style="max-width: 500px" /></p>
+<p><img src="images/new_rmarkdown.png" style="max-width: 500px" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Select the “Web Exercises” template.</li>
 </ol>
-<p><img src="images/webex_template.png" width="533" style="max-width: 500px;" /></p>
+<p><img src="images/webex_template.png" style="max-width: 500px;" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Edit the template with your content. Leave the <code>setup</code> chunk of code at the top.</p></li>
 <li><p>Knit to HTML</p></li>
 </ol>
-<p><img src="images/knit_webex.png" width="890" style="max-width: 500px" /></p>
+<p><img src="images/knit_webex.png" style="max-width: 500px" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Open the new .html file in your web browser.</li>
 </ol>
