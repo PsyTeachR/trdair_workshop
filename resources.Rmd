@@ -32,6 +32,8 @@ title: "Resources"
 
 ## On teaching R
 
+- [Evaluating the association between software choice (SPSS vs R), anxiety, and performance in an undergraduate statistics course](LTC_workshop.pdf)
+
 - [Dale Barr: No more excuses! R is better than SPSS for psychology undergrads, and students agree](https://datahowler.wordpress.com/2016/09/10/no-more-excuses-r-is-better-than-spss-for-psychology-undergrads-and-students-agree/)
 
 - [Grolemund, G. & Wickham, H. (2014). A cognitive interpretation of data analysis. *International Statistical Review*, *82*, 184--204](http://onlinelibrary.wiley.com/doi/10.1111/insr.12028/abstract)
