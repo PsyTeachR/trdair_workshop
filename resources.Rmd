@@ -41,3 +41,6 @@ title: "Resources"
 - [Baumer, B., Çetinkaya-Rundel, M., Bray, A., Loi, L., & Horton, N. (2014). RMarkdown: Integrating a Reproducible Analysis Tool into Introductory Statistics. *Technology Innovations in Statistics Education*, *8*(1)](http://escholarship.org/uc/item/90b2f5xh)
 
 - [David Robinson: Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/)
+
+- [Russ Poldrack: To Code or Not To Code (in Intro Statistics)?](http://www.russpoldrack.org/2018/03/to-code-or-not-to-code-in-intro.html)
+
