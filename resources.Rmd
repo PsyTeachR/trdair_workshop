@@ -36,11 +36,12 @@ title: "Resources"
 
 - [Dale Barr: No more excuses! R is better than SPSS for psychology undergrads, and students agree](https://datahowler.wordpress.com/2016/09/10/no-more-excuses-r-is-better-than-spss-for-psychology-undergrads-and-students-agree/)
 
-- [Grolemund, G. & Wickham, H. (2014). A cognitive interpretation of data analysis. *International Statistical Review*, *82*, 184--204](http://onlinelibrary.wiley.com/doi/10.1111/insr.12028/abstract)
-
 - [Baumer, B., Çetinkaya-Rundel, M., Bray, A., Loi, L., & Horton, N. (2014). RMarkdown: Integrating a Reproducible Analysis Tool into Introductory Statistics. *Technology Innovations in Statistics Education*, *8*(1)](http://escholarship.org/uc/item/90b2f5xh)
 
-- [David Robinson: Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/)
+- [Brown, N. C. C., & Wilson, G. (2018). Ten quick tips for teaching programming](https://doi.org/10.1371/journal.pcbi.1006023)
+
+- [Grolemund, G. & Wickham, H. (2014). A cognitive interpretation of data analysis. *International Statistical Review*, *82*, 184--204](http://onlinelibrary.wiley.com/doi/10.1111/insr.12028/abstract)
 
 - [Russ Poldrack: To Code or Not To Code (in Intro Statistics)?](http://www.russpoldrack.org/2018/03/to-code-or-not-to-code-in-intro.html)
 
+- [David Robinson: Teach the tidyverse to beginners](http://varianceexplained.org/r/teach-tidyverse/)
