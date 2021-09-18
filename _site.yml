@@ -1,17 +1,20 @@
 name: Teaching Reproducible Data Analysis in R
-author: GUPsych R Team
+author: psyTeachR
 output_dir: docs
 output:
   html_document:
-    theme: flatly
-    lib_dir: site_libs
+    df_print: paged
     self_contained: no
-    css: webex.css
+    theme:
+      primary: "#127AB2"
+      version: 4
+    css: [include/webex.css, include/style.css]
     includes:
-      in_header: header.html
+      in_header: include/header.html
+      after_body: include/webex.js
 navbar:
   title: TRDAiR
   right:
-    - text: "GUPsych"
+    - text: "psyTeachR"
       icon: fa-home
       href: /

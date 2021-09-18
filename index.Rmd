@@ -7,7 +7,7 @@ title: "Teaching Reproducible Data Analysis in R"
   <p class="caption">We made our [logo with R code](logo.html)</p>
 </div>
 
-The Institute of Neuroscience and Psychology and the School of Psychology at the University of Glasgow is hosting a one-day workshop from 09:30 – 16:30 on 9 March 2017 on teaching reproducible data analysis to psychology undergraduates and postgraduates using R.
+The Institute of Neuroscience and Psychology and the School of Psychology at the University of Glasgow hosted a one-day workshop from 09:30 – 16:30 on 9 March 2017 on teaching reproducible data analysis to psychology undergraduates and postgraduates using R.
 
 Our teaching team has successfully made the transition to teaching R across all undergraduate and postgraduate levels, and we are organising this workshop in order to share experiences, insights, and teaching materials with academic staff from other institutions.
 
@@ -39,10 +39,3 @@ Check our [resources](resources.html) page for links to additional materials: bl
 * 15:30 - 16:30 Wine and discussion
 </div>
 
-<div id="twitter">
-<a class="twitter-timeline"  href="https://twitter.com/hashtag/PsyTeachR" data-widget-id="971890846277742592">#PsyTeachR Tweets</a>
-</div>
-
-
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

@@ -1,23 +1,22 @@
 ---
-title: "Web exercises with `webex`" 
-output:
-  html_document:
-    css: webex.css
-    includes:
-      after_body: webex.js
+title: "Web exercises with `webexercises`" 
 ---
 
 ```{r setup, include = FALSE, message=FALSE}
-library("webex")
+library("webexercises")
 library(ggplot2)
 knitr::opts_chunk$set(fig.path='images/')
 ```
 
+<div style="border: 3px solid red; border-radius: 1em; margin: 1em auto; width: 20em; text-align: center;">
+[webexercises](/webexercises/) has replaced `webex` and is on CRAN
+</div>
+
 Dale and Lisa are developing an R package called [`webex`](https://github.com/dalejbarr/webex) to make it easier to make web-based exercises. It provides an RMarkdown template and a few functions to make questions that automatically give feedback and hint or solution buttons.
 
-Create fill-in-the-blank questions using `fitb("4")`, providing the answer as the first argument.
+Create fill-in-the-blank questions using `fitb(4)`, providing the answer as the first argument.
 
-- 2 + 2 is `r fitb("4")`
+- 2 + 2 is `r fitb(4)`
 
 You can also create these questions dynamically, using variables from your R session.
 
